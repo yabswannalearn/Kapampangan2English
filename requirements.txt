@@ -1,0 +1,18 @@
+# LangChain Core and Community
+langchain
+langchain-core
+langchain-community
+
+# Vector Database (Chroma)
+chromadb
+langchain-chroma
+
+# Embeddings and Models
+sentence-transformers
+langchain-huggingface
+
+# LLM Integration
+langchain-ollama
+
+# Utilities
+pydantic

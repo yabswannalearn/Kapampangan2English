@@ -1,0 +1,11 @@
+# Ignore Python environment
+venv/
+__pycache__/
+
+# Ignore the model weights
+*.gguf
+*.safetensors
+kapampangan_model/
+model/
+
+data/*

@@ -9,3 +9,4 @@ kapampangan_model/
 model/
 
 data/*
+!data/.gitkeep

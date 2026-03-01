@@ -6,6 +6,7 @@ from langchain_community.llms import Ollama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
+import re
 
 app = FastAPI()
 
@@ -49,9 +50,12 @@ def check():
 def translate(request: QueryRequests):
     try: 
         response = rag_chain.invoke({"input": request.query})
+        raw_answer = response["answer"]
+
+        clean_answer = re.sub(r'<think>.*?</think>', '', raw_answer, flags=re.DOTALL).strip()
         return {
             "query": request.query,
-            "translations": response["answer"].strip()
+            "translations": clean_answer
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

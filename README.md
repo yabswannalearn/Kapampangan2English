@@ -24,7 +24,6 @@ This project utilizes a custom fine-tuned model optimized for low-resource Phili
 **[Fine-Tuned-Translator Repository](https://github.com/yabswannalearn/Fine-Tuned-Translator)**
 
 ### Training Parameters & Logic
-These parameters were specifically chosen to optimize performance on a GTX 1650:
 
 | Parameter | Value | Technical Rationale |
 | :--- | :--- | :--- |
